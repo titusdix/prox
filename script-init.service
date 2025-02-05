@@ -1,0 +1,12 @@
+[Unit]
+Description=Initialisation des scripts route et iptables
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /root/script_init/route.sh
+ExecStart=/bin/bash /root/script_init/iptables_rules.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
