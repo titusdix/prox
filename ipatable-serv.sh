@@ -87,10 +87,6 @@ iptables -A INPUT -p udp -m conntrack --ctstate NEW -j UDP
 # TCP = ACCEPTE / LANCE DANS LA CHAÎNE (TCP aime les règles)
 iptables -A INPUT -p tcp --syn -m conntrack --ctstate NEW -j TCP
 
-# --------------------
-# RÈGLES POUR PrxPubVBR
-# --------------------
-
 ### RÈGLES D'ENTRÉE
 # -----------------
 
